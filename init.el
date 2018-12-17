@@ -46,9 +46,9 @@ This function should only modify configuration layer settings."
      coffeescript
      docker
      emacs-lisp
-     gtags
      (git :variables
           git-magit-status-fullscreen t)
+     gtags
      html
      javascript
      json
@@ -57,11 +57,17 @@ This function should only modify configuration layer settings."
      neotree
      nginx
      (org :variables
-          org-directory "~/Documents/org"
-          org-agenda-files (list org-directory)
-          org-default-notes-file (expand-file-name "notes.org" org-directory)
-          org-journal-dir (expand-file-name "journal/" org-directory)
-          org-projectile-file "TODOs.org"
+          org-directory "~/Documents/org/"
+          org-agenda-files (list "~/Documents/org/")
+          org-journal-dir "~/Documents/org/journal/"
+          org-projectile-file "~/Documents/org/projects.org"
+          org-capture-templates
+          '(("i" "Inbox" entry (file+headline "~/Documents/org/inbox.org" "Inbox")
+             "* %?\n  %U\n  %a")
+            ("n" "Notes" entry (file+headline "~/Documents/org/notes.org" "Notes")
+             "* %?\n  %U\n  %a")
+            ("t" "Tasks" entry (file+headline "~/Documents/org/tasks.org" "Tasks")
+             "* %?\n  %U\n  %a"))
           org-enable-github-support t
           org-enable-org-journal-support t
           spaceline-org-clock-p t)
