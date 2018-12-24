@@ -74,7 +74,8 @@ This function should only modify configuration layer settings."
           org-enforce-todo-dependencies t
           spaceline-org-clock-p t)
      restclient
-     ruby
+     (ruby :variables
+           ruby-insert-encoding-magic-comment nil)
      ruby-on-rails
      ;; (shell :variables
      ;;        shell-default-height 30
