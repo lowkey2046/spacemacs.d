@@ -61,18 +61,14 @@ This function should only modify configuration layer settings."
      (org :variables
           org-directory "~/Documents/org/"
           org-agenda-files (list "~/Documents/org/")
-          org-journal-dir "~/Documents/org/journal/"
           org-projectile-file "TODOs.org"
           org-capture-templates
-          '(("i" "Inbox" entry (file+headline "~/Documents/org/inbox.org" "Inbox")
+          '(("h" "Inbox(@home)" entry (file+olp "~/Documents/org/inbox.org" "Inbox" "Home")
              "* %?\n  %U\n  %a")
-            ("n" "Notes" entry (file+headline "~/Documents/org/notes.org" "Notes")
-             "* %?\n  %U\n  %a")
-            ("t" "Tasks" entry (file+headline "~/Documents/org/tasks.org" "Tasks")
+            ("w" "Inbox(@work)" entry (file+olp "~/Documents/org/inbox.org" "Inbox" "Work")
              "* %?\n  %U\n  %a"))
           org-enable-github-support t
           org-enable-hugo-support t
-          org-enable-org-journal-support t
           org-enforce-todo-dependencies t
           spaceline-org-clock-p t)
      protobuf
