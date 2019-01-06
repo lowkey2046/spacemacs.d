@@ -51,8 +51,12 @@ This function should only modify configuration layer settings."
      (go :variables
          go-tab-width 4)
      gtags
-     html
-     javascript
+     (html :variables
+           css-indent-offset 2
+           web-mode-markup-indent-offset 2)
+     (javascript :variables
+                 js-indent-level 2
+                 js2-basic-offset 2)
      json
      markdown
      multiple-cursors
@@ -492,7 +496,6 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
   (xterm-mouse-mode -1)
-  (setq css-indent-offset 2)
   (setq system-time-locale "C")
   (setq google-translate-default-source-language "en")
   (setq google-translate-default-target-language "zh-CN")
