@@ -52,9 +52,16 @@ This function should only modify configuration layer settings."
          go-tab-width 4)
      gtags
      (html :variables
-           css-indent-offset 2
+           web-mode-block-padding 2
+           web-mode-code-indent-offset 2
+           web-mode-css-indent-offset 2
+           web-mode-indent-style 2
+           web-mode-script-padding 2
+           web-mode-style-padding 2
            web-mode-markup-indent-offset 2)
-     java
+     (java :variables
+           c-basic-offset 2
+           indent-tabs-mode t)
      (javascript :variables
                  js-indent-level 2
                  js2-basic-offset 2)
