@@ -60,8 +60,7 @@ This function should only modify configuration layer settings."
            web-mode-style-padding 2
            web-mode-markup-indent-offset 2)
      (java :variables
-           c-basic-offset 2
-           indent-tabs-mode t)
+           c-basic-offset 2)
      (javascript :variables
                  js-indent-level 2
                  js2-basic-offset 2)
@@ -233,7 +232,8 @@ It should only modify the values of Spacemacs settings."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(spacemacs-dark
+   dotspacemacs-themes '(monokai
+                         spacemacs-dark
                          spacemacs-light)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
@@ -243,7 +243,7 @@ It should only modify the values of Spacemacs settings."
    ;; refer to the DOCUMENTATION.org for more info on how to create your own
    ;; spaceline theme. Value can be a symbol or list with additional properties.
    ;; (default '(spacemacs :separator wave :separator-scale 1.5))
-   dotspacemacs-mode-line-theme '(spacemacs :separator wave :separator-scale 1.5)
+   dotspacemacs-mode-line-theme '(vim-powerline :separator wave :separator-scale 1.0)
 
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    ;; (default t)
@@ -251,8 +251,8 @@ It should only modify the values of Spacemacs settings."
 
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Source Code Pro"
-                               :size 13
+   dotspacemacs-default-font '("Ubuntu Mono"
+                               :size 16
                                :weight normal
                                :width normal)
 
@@ -510,6 +510,10 @@ before packages are loaded."
   (setq system-time-locale "C")
   (setq google-translate-default-source-language "en")
   (setq google-translate-default-target-language "zh-CN")
+  (dolist (charset '(kana han symbol cjk-misc bopomofo))
+    (set-fontset-font (frame-parameter nil 'font)
+                      charset (font-spec :family "文泉驿等宽微米黑"
+                                         :size 16)))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
