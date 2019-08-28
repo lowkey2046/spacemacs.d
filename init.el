@@ -88,11 +88,12 @@ This function should only modify configuration layer settings."
      react
      restclient
      (ruby :variables
+           ruby-enable-enh-ruby-mode t
            ruby-insert-encoding-magic-comment nil)
      ruby-on-rails
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
+     (shell :variables
+            shell-default-height 30
+            shell-default-position 'bottom)
      ;; spell-checking
      sql
      ;; syntax-checking
