@@ -59,6 +59,7 @@ This function should only modify configuration layer settings."
            web-mode-script-padding 2
            web-mode-style-padding 2
            web-mode-markup-indent-offset 2)
+     imenu-list
      (java :variables
            c-basic-offset 2)
      (javascript :variables
