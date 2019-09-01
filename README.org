@@ -1,0 +1,6 @@
+* spacemacs 配置
+** 依赖
+*** sql
+    #+BEGIN_SRC shell
+      gem install sqlint
+    #+END_SRC

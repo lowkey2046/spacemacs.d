@@ -96,7 +96,8 @@ This function should only modify configuration layer settings."
             shell-default-height 30
             shell-default-position 'bottom)
      ;; spell-checking
-     sql
+     (sql :variables
+          sql-capitalize-keywords t)
      ;; syntax-checking
      systemd
      version-control

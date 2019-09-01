@@ -1,1 +1,0 @@
-# spacemacs 配置
