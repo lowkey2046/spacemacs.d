@@ -1,6 +1,10 @@
 * spacemacs 配置
 ** 依赖
 *** sql
-    #+BEGIN_SRC shell
-      gem install sqlint
-    #+END_SRC
+#+BEGIN_SRC shell
+  gem install sqlint
+#+END_SRC
+*** plantuml
+#+BEGIN_SRC shell
+  wget https://nchc.dl.sourceforge.net/project/plantuml/plantuml.jar -O ~/.emacs.d/.cache/plantuml/plantuml.jar
+#+END_SRC

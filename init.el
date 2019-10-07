@@ -85,6 +85,10 @@ This function should only modify configuration layer settings."
           org-enable-org-journal-support t
           org-enforce-todo-dependencies t
           spaceline-org-clock-p t)
+     (plantuml :variables
+               plantuml-default-exec-mode 'jar
+               plantuml-jar-path "~/.emacs.d/.cache/plantuml/plantuml.jar"
+               org-plantuml-jar-path "~/.emacs.d/.cache/plantuml/plantuml.jar")
      protobuf
      react
      restclient
@@ -97,7 +101,8 @@ This function should only modify configuration layer settings."
             shell-default-position 'bottom)
      ;; spell-checking
      (sql :variables
-          sql-capitalize-keywords t)
+          sql-capitalize-keywords t
+          sql-capitalize-keywords-disable-interactive t)
      ;; syntax-checking
      systemd
      version-control
@@ -235,8 +240,7 @@ It should only modify the values of Spacemacs settings."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(monokai
-                         spacemacs-dark
+   dotspacemacs-themes '(spacemacs-dark
                          spacemacs-light)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
