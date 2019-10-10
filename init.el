@@ -42,6 +42,7 @@ This function should only modify configuration layer settings."
      asciidoc
      auto-completion
      ;; better-defaults
+     chinese
      coffeescript
      docker
      emacs-lisp
@@ -70,6 +71,7 @@ This function should only modify configuration layer settings."
      neotree
      nginx
      (org :variables
+          org-adapt-indentation nil
           org-directory "~/Documents/org/"
           org-agenda-files (list "~/Documents/org/")
           org-journal-dir "~/Documents/org/journal/"
