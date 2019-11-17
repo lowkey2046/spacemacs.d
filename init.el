@@ -52,6 +52,8 @@ This function should only modify configuration layer settings."
          go-tab-width 4)
      gtags
      (html :variables
+           js2-basic-offset 2
+           css-indent-offset 2
            web-mode-block-padding 2
            web-mode-code-indent-offset 2
            web-mode-css-indent-offset 2
@@ -77,7 +79,9 @@ This function should only modify configuration layer settings."
           org-journal-dir "~/Documents/org/journal/"
           org-projectile-file "TODOs.org"
           org-capture-templates
-          '(("h" "Inbox(@home)" entry (file+olp "~/Documents/org/inbox.org" "Inbox" "Home")
+          '(("f" "Inbox(@flower)" entry (file+olp "~/Documents/org/inbox.org" "Inbox" "Flower")
+             "* %?\n  %U\n  %a")
+            ("h" "Inbox(@home)" entry (file+olp "~/Documents/org/inbox.org" "Inbox" "Home")
              "* %?\n  %U\n  %a")
             ("w" "Inbox(@work)" entry (file+olp "~/Documents/org/inbox.org" "Inbox" "Work")
              "* %?\n  %U\n  %a"))

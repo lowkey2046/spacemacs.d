@@ -6,5 +6,11 @@
 #+END_SRC
 *** plantuml
 #+BEGIN_SRC shell
+  sudo apt install graphviz
   wget https://nchc.dl.sourceforge.net/project/plantuml/plantuml.jar -O ~/.emacs.d/.cache/plantuml/plantuml.jar
 #+END_SRC
+*** 翻译
+=SPC f e l= 如下文件改 =google.com= 为 =google.cn=
+- =google-translate-tk.el=
+- =google-translate-core.el=
+=SPC x g t= 翻译当前单词
