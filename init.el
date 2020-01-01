@@ -98,7 +98,7 @@ This function should only modify configuration layer settings."
      react
      restclient
      (ruby :variables
-           ruby-enable-enh-ruby-mode t
+           ruby-enable-enh-ruby-mode nil
            ruby-insert-encoding-magic-comment nil)
      ruby-on-rails
      (shell :variables
@@ -110,6 +110,7 @@ This function should only modify configuration layer settings."
           sql-capitalize-keywords-disable-interactive t)
      ;; syntax-checking
      systemd
+     typescript
      version-control
      xclipboard
      yaml
